@@ -2,6 +2,7 @@ const connectToMongo = require("./db")
 const express = require('express')
 const cors = require('cors')
 const path = require("path")
+import { router as bikesRouter } from "./router";
 
 connectToMongo()
 const app = express()
@@ -24,6 +25,7 @@ app.use('/api/aboutContain', require("./router/aboutContain"))
 app.use('/api/gallery', require("./router/gallery"))
 app.use('/api/contactUs', require("./router/contactUs"))
 app.use('/api/gymStudent', require("./router/gymStudent"))
+app.use("/bikes", bikesRouter);
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`)
