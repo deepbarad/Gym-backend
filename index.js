@@ -2,7 +2,7 @@ const connectToMongo = require("./db")
 const express = require('express')
 const cors = require('cors')
 const path = require("path")
-import { router as bikesRouter } from "./router";
+const bikesRouter = require("./router")
 
 connectToMongo()
 const app = express()
