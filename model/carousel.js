@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const carouselSchema = new Schema({
     files: {
-        type: "string",
+        type: String,
         requireL: true
     },
 

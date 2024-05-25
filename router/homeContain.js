@@ -95,7 +95,7 @@ router.put(
                         thirdContainTitle,
                         thirdContain,
                         thirdImage: obj?.thirdImage !== undefined ? req?.files["thirdImage"][0].filename : req?.body?.thirdImage,
-                        isActive: req?.query?.isActive === undefined ? false : true
+                        isActive: req?.query?.isActive === undefined ? false : req?.query?.isActive
                     },
                 },
                 { new: true }

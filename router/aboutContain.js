@@ -50,7 +50,7 @@ router.put(
                 req.params.id,
                 {
                     $set: {
-                        aboutContainTitle, aboutImage: req?.file?.filename, aboutContain, isActive: req?.query?.isActive === undefined ? false : true
+                        aboutContainTitle, aboutImage: req?.file?.filename, aboutContain, isActive: req?.query?.isActive === undefined ? false : req?.query?.isActive
                     },
                 },
                 { new: true }
